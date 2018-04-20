@@ -11,7 +11,7 @@ JupyterHub with many popular Python 3 packages.
 ```
 docker run -d \
     --log-opt max-size=50m \
-    -p 8888:8888 \ 
+    -p 8888:8888 \
     -e DOCKER_USER=`id -un` \
     -e DOCKER_USER_ID=`id -u` \
     -e DOCKER_PASSWORD=`id -un` \
