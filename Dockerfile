@@ -9,5 +9,3 @@ RUN conda install -c conda-forge -c glaxosmithkline \
         pysocks \
         requests[socks] Scrapy beautifulsoup4 wget
 
-# RUN jupyter labextension install jupyterlab_bokeh \
-    # && jupyter lab build
