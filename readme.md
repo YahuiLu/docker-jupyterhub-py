@@ -84,8 +84,7 @@ docker run -d \
     -e DOCKER_GROUP_ID=`id -g` \
     -e DOCKER_ADMIN_USER=`id -un` \
     -e USER_MEM_LIMIT=4G \
-    -v /wwwroot:/jupyter \
-    -v /wwwroot:/wwwroot \
+    -v /wwwroot:/workdir \
     -v /home:/home_host \
     dclong/jupyterhub-py
 ```
@@ -99,7 +98,7 @@ docker run -d \
     -e DOCKER_GROUP_ID=`id -g` \
     -e DOCKER_ADMIN_USER=`id -un` \
     -e USER_MEM_LIMIT=4G \
-    -v $HOME:/jupyter \
+    -v $HOME:/workdir \
     dclong/jupyterhub-py
 ```
 ```
@@ -112,7 +111,7 @@ docker run -d \
     -e DOCKER_GROUP_ID=`id -g` \
     -e DOCKER_ADMIN_USER=`id -un` \
     -e USER_MEM_LIMIT=4G \
-    -v `pwd`:/jupyter \
+    -v `pwd`:/workdir \
     registry.docker-cn.com/dclong/jupyterhub-py
 ```
 ## Use the JupyterHub Server
