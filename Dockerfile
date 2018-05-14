@@ -3,7 +3,7 @@ FROM dclong/jupyterhub
 RUN apt-get update \
     && apt-get install -y openjdk-8-jdk
 
-RUN conda install -c conda-forge -c pytorch -c glaxosmithkline \
+RUN conda install -y -c conda-forge -c pytorch -c glaxosmithkline \
         numpy scipy pandas dask \
         pytorch torchvision tensorflow keras h2o \
         gensim nltk \
