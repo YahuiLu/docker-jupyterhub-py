@@ -5,8 +5,10 @@ RUN apt-get update \
 
 RUN conda install -c conda-forge -c glaxosmithkline \
         numpy scipy pandas dask \
-        tensorflow keras h2o scikit-learn nltk \
-        matplotlib seaborn bokeh plotly \ 
+        torch torchvision tensorflow keras h2o \
+        gensim nltk \
+        scikit-learn xgboost \
+        matplotlib bokeh \
         tabulate \
         JayDeBeApi pymysql pymongo sqlalchemy sqlparse \
         pysocks \
