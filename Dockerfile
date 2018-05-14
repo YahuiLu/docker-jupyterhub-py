@@ -5,7 +5,7 @@ RUN apt-get update \
 
 RUN conda install -y -c conda-forge -c pytorch -c glaxosmithkline \
         numpy scipy pandas dask \
-        pytorch torchvision tensorflow keras h2o \
+        pytorch-cpu torchvision-cpu tensorflow keras h2o \
         gensim nltk \
         scikit-learn xgboost \
         matplotlib bokeh \
