@@ -1,6 +1,6 @@
 # [dclong/jupyterhub-py](https://hub.docker.com/r/dclong/jupyterhub-py/)
 
-JupyterHub with Anaconda Python 3 with many popular Python packages.
+JupyterHub with Anaconda Python 3 and popular Python packages.
 **It is suggested that you use [dclong/jupyterhub-ds](https://hub.docker.com/r/dclong/jupyterhub-ds/)
 for data science related work.**
 
