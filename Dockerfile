@@ -8,16 +8,12 @@ RUN conda install -y -c conda-forge \
         tensorflow keras \
         gensim nltk \
         scikit-learn xgboost \
-        matplotlib \
+        matplotlib bokeh \
         tabulate \
         JayDeBeApi pymysql pymongo sqlalchemy sqlparse \
         pysocks \
         requests[socks] Scrapy beautifulsoup4 wget
-
-# HoloViews & Bokeh
-RUN conda install -y -c pyviz holoviews bokeh \
-    && jupyter labextension install @pyviz/jupyterlab_pyviz
-
+        
 # PyTorch
 RUN conda install -y -c pytorch pytorch-cpu torchvision-cpu
 
