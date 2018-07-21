@@ -3,19 +3,13 @@ FROM dclong/jupyterhub
 RUN apt-get update \
     && apt-get install -y openjdk-8-jdk
 
-RUN conda install -y -c conda-forge \
-        numpy scipy pandas dask \
-        tensorflow keras \
-        gensim nltk \
+RUN pip3 install \
+        numpy scipy pandas \
+        torch torchvision keras h2o \
+        gensim \
         scikit-learn xgboost \
         matplotlib bokeh \
         tabulate \
-        JayDeBeApi pymysql pymongo sqlalchemy sqlparse \
+        JayDeBeApi sqlalchemy sqlparse \
         pysocks \
         requests[socks] Scrapy beautifulsoup4 wget
-        
-# PyTorch
-RUN conda install -y -c pytorch pytorch-cpu torchvision-cpu
-
-# H2O
-RUN conda install -y -c h2oai h2o

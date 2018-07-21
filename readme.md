@@ -1,6 +1,6 @@
 # [dclong/jupyterhub-py](https://hub.docker.com/r/dclong/jupyterhub-py/)
 
-JupyterHub with Anaconda Python 3 and popular Python packages.
+JupyterHub with Python 3 and popular Python packages.
 **It is suggested that you use [dclong/jupyterhub-ds](https://hub.docker.com/r/dclong/jupyterhub-ds/)
 for data science related work.**
 
@@ -11,16 +11,15 @@ OS: the latest Ubuntu LTS
 Desktop Environment: None  
 Remote Desktop: None  
 Kernels: Python 3
-- numpy scipy pandas dask  
-- torch torchvision tensorflow keras h2o  
-- gensim nltk  
-- scikit-learn xgboost  
-- matplotlib seaborn bokeh plotly  
-- tabulate  
-- JayDeBeApi pymysql pymongo sqlalchemy  
-- pysocks  
-- requests[socks] Scrapy beautifulsoup4 wget  
-- ansible
+- numpy scipy pandas
+- torch torchvision tensorflow keras h2o
+- gensim
+- scikit-learn xgboost
+- matplotlib bokeh
+- tabulate
+- JayDeBeApi sqlalchemy sqlparse
+- pysocks
+- requests[socks] Scrapy beautifulsoup4 wget
 
 ## Usage in Linux/Unix
 
@@ -100,21 +99,8 @@ docker run -d \
     -e DOCKER_GROUP_ID=`id -g` \
     -e DOCKER_ADMIN_USER=`id -un` \
     -e USER_MEM_LIMIT=4G \
-    -v $HOME:/workdir \
-    dclong/jupyterhub-py
-```
-```
-docker run -d \
-    --log-opt max-size=50m \
-    -p 8000:8000 \
-    -e DOCKER_USER=`id -un` \
-    -e DOCKER_USER_ID=`id -u` \
-    -e DOCKER_PASSWORD=`id -un` \
-    -e DOCKER_GROUP_ID=`id -g` \
-    -e DOCKER_ADMIN_USER=`id -un` \
-    -e USER_MEM_LIMIT=4G \
     -v `pwd`:/workdir \
-    registry.docker-cn.com/dclong/jupyterhub-py
+    dclong/jupyterhub-py
 ```
 ## Use the JupyterHub Server
 
