@@ -1,7 +1,4 @@
-FROM dclong/jupyterhub
-
-RUN apt-get update \
-    && apt-get install -y openjdk-8-jdk
+FROM dclong/jupyterhub-jdk
 
 RUN pip3 install \
         numpy scipy pandas \
