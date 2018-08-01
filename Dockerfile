@@ -1,6 +1,7 @@
 FROM dclong/jupyterhub-jdk
 
 RUN pip3 install \
+        mypy pylint monkeytype yapf \
         numpy scipy pandas \
         torch torchvision keras h2o \
         gensim \
@@ -10,3 +11,5 @@ RUN pip3 install \
         JayDeBeApi sqlalchemy sqlparse \
         pysocks \
         requests[socks] Scrapy beautifulsoup4 wget
+
+RUN jupyter labextension install jupyterlab_bokeh
