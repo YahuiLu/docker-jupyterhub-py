@@ -6,10 +6,10 @@ RUN pip3 install \
         torch torchvision keras h2o \
         gensim \
         scikit-learn xgboost \
-        matplotlib bokeh \
+        matplotlib bokeh holoviews[recommended] \
         tabulate \
         JayDeBeApi sqlalchemy sqlparse \
         pysocks \
         requests[socks] Scrapy beautifulsoup4 wget
 
-RUN jupyter labextension install jupyterlab_bokeh
+RUN jupyter labextension install @pyviz/jupyterlab_pyviz
