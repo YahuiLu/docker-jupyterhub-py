@@ -1,7 +1,7 @@
 FROM dclong/jupyterhub-jdk:18.04
 
 RUN pip3 install \
-        mypy pylint monkeytype yapf \
+        mypy pylint monkeytype yapf pytest \
         numpy scipy pandas \
         torch torchvision keras h2o \
         gensim \
