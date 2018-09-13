@@ -1,4 +1,4 @@
-FROM dclong/jupyterhub-jdk
+FROM dclong/jupyterhub-jdk:18.04
 
 RUN pip3 install \
         mypy pylint monkeytype yapf \
