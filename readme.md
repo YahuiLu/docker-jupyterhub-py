@@ -1,16 +1,16 @@
 # [dclong/jupyterhub-py](https://hub.docker.com/r/dclong/jupyterhub-py/)
 
-JupyterHub with Python 3 and popular Python packages.
+JupyterHub and popular Python packages.
 **It is suggested that you use [dclong/jupyterhub-ds](https://hub.docker.com/r/dclong/jupyterhub-ds/)
 for data science related work.**
 
 
 ## Detailed Information
 
-OS: the latest Ubuntu LTS  
+OS: the latest Ubuntu 18.04  
 Desktop Environment: None  
 Remote Desktop: None  
-Kernels: Python 3
+Kernels: Python 3.6.5
 - numpy scipy pandas
 - torch torchvision tensorflow keras h2o
 - gensim
