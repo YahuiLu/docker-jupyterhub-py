@@ -75,6 +75,23 @@ You can mount directory on the host to it as you wish.
 In the illustration command below,
 I have the directory `/workdir` on the host mounted to `/workdir` in the container.
 
+The following command starts a container 
+and mounts `/workdir` and `/home` on the host machine to `/workdir` and `/home_host` in the container respectively.
+```
+docker run -d \
+    --log-opt max-size=50m \
+    -p 8000:8000 \
+    -e DOCKER_USER=`id -un` \
+    -e DOCKER_USER_ID=`id -u` \
+    -e DOCKER_PASSWORD=`id -un` \
+    -e DOCKER_GROUP_ID=`id -g` \
+    -e DOCKER_ADMIN_USER=`id -un` \
+    -e USER_MEM_LIMIT=4G \
+    -v /workdir:/workdir \
+    -v /home:/home_host \
+    dclong/jupyterhub-py
+```
+The following command does the same as the above one but limits the use of memory and CPU. It only works on Linux host machines.
 ```
 docker run -d \
     --log-opt max-size=50m \
@@ -91,6 +108,9 @@ docker run -d \
     -v /home:/home_host \
     dclong/jupyterhub-py
 ```
+The following command does the same as the above one 
+except that it mounts the current working directory on the host machine
+into `/workdir` in the container.
 ```
 docker run -d \
     --log-opt max-size=50m \
