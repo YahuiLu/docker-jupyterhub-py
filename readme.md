@@ -89,7 +89,7 @@ docker run -d \
     -e DOCKER_ADMIN_USER=`id -un` \
     -e USER_MEM_LIMIT=4G \
     -v `pwd`:/workdir \
-    -v /home:/home_host \
+    -v `dirname $HOME`:/home_host \
     dclong/jupyterhub-py
 ```
 The following command does the same as the above one but limits the use of memory and CPU. It only works on Linux host machines.
@@ -106,7 +106,7 @@ docker run -d \
     -e DOCKER_ADMIN_USER=`id -un` \
     -e USER_MEM_LIMIT=4G \
     -v /workdir:/workdir \
-    -v /home:/home_host \
+    -v `dirname $HOME`:/home_host \
     dclong/jupyterhub-py
 ```
 The following command does the same as the above one 
@@ -125,6 +125,7 @@ docker run -d \
     -e DOCKER_ADMIN_USER=`id -un` \
     -e USER_MEM_LIMIT=4G \
     -v `pwd`:/workdir \
+    -v `dirname $HOME`:/home_host \
     dclong/jupyterhub-py
 ```
 ## Use the JupyterHub Server
