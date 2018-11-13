@@ -76,7 +76,8 @@ In the illustration command below,
 I have the directory `/workdir` on the host mounted to `/workdir` in the container.
 
 The following command starts a container 
-and mounts `/workdir` and `/home` on the host machine to `/workdir` and `/home_host` in the container respectively.
+and mounts the current working directory and `/home` on the host machine 
+to `/workdir` and `/home_host` in the container respectively.
 ```
 docker run -d \
     --log-opt max-size=50m \
@@ -87,7 +88,7 @@ docker run -d \
     -e DOCKER_GROUP_ID=`id -g` \
     -e DOCKER_ADMIN_USER=`id -un` \
     -e USER_MEM_LIMIT=4G \
-    -v /workdir:/workdir \
+    -v `pwd`:/workdir \
     -v /home:/home_host \
     dclong/jupyterhub-py
 ```
