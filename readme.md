@@ -93,8 +93,7 @@ docker run -d \
     dclong/jupyterhub-py
 ```
 The following command does the same as the above one 
-except that it mounts the current working directory on the host machine
-into `/workdir` in the container.
+except that it limits the use of CPU and memory.
 ```
 docker run -d \
     --log-opt max-size=50m \
