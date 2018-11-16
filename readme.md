@@ -92,23 +92,6 @@ docker run -d \
     -v `dirname $HOME`:/home_host \
     dclong/jupyterhub-py
 ```
-The following command does the same as the above one but limits the use of memory and CPU. It only works on Linux host machines.
-```
-docker run -d \
-    --log-opt max-size=50m \
-    --memory=$(($(head -n 1 /proc/meminfo | awk '{print $2}') * 4 / 5))k \
-    --cpus=$((`nproc` - 1)) \
-    -p 8000:8000 \
-    -e DOCKER_USER=`id -un` \
-    -e DOCKER_USER_ID=`id -u` \
-    -e DOCKER_PASSWORD=`id -un` \
-    -e DOCKER_GROUP_ID=`id -g` \
-    -e DOCKER_ADMIN_USER=`id -un` \
-    -e USER_MEM_LIMIT=4G \
-    -v /workdir:/workdir \
-    -v `dirname $HOME`:/home_host \
-    dclong/jupyterhub-py
-```
 The following command does the same as the above one 
 except that it mounts the current working directory on the host machine
 into `/workdir` in the container.
