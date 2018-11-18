@@ -85,7 +85,6 @@ docker run -d \
     -e DOCKER_PASSWORD=`id -un` \
     -e DOCKER_GROUP_ID=`id -g` \
     -e DOCKER_ADMIN_USER=`id -un` \
-    -e USER_MEM_LIMIT=4G \
     -v `pwd`:/workdir \
     -v `dirname $HOME`:/home_host \
     dclong/jupyterhub-py
@@ -103,7 +102,6 @@ docker run -d \
     -e DOCKER_PASSWORD=`id -un` \
     -e DOCKER_GROUP_ID=`id -g` \
     -e DOCKER_ADMIN_USER=`id -un` \
-    -e USER_MEM_LIMIT=4G \
     -v `pwd`:/workdir \
     -v `dirname $HOME`:/home_host \
     dclong/jupyterhub-py
