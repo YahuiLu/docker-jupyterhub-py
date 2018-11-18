@@ -72,8 +72,6 @@ Keep the default if you don't know what are the best to use.
 
 The root directory of JupyterLab/Jupyter notebooks is `/workdir` in the container.
 You can mount directory on the host to it as you wish.
-In the illustration command below,
-I have the directory `/workdir` on the host mounted to `/workdir` in the container.
 
 The following command starts a container 
 and mounts the current working directory and `/home` on the host machine 
@@ -154,16 +152,7 @@ the default password (same as the user name) is used.
 
 ## Known Issues
 
-1. Lack of resource management.
-    The argument `USER_MEM_LIMIT` is not in effect due to the default Spawner used.
-    This is not big issue if you have a few light users.
-    However,
-    if there are many heavy users (especially Spark notebook users) you server can run out of memory.
-    It's good practice to deploy the Docker container on a server with large memory
-    if it's intended for use by a team
-    and have users close unused notebooks to save memory.  
-
-2. The subprocess managment issue.
+1. The subprocess managment issue.
     This is not an issue at in most use cases.
     This Docker image launch service using a shell script
     so there won't be orphan subprocesses
