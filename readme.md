@@ -89,7 +89,7 @@ docker run -d \
     -v `dirname $HOME`:/home_host \
     dclong/jupyterhub-py
 ```
-The following command does the same as the above one 
+The following command (**only work in Linux**) does the same as the above one 
 except that it limits the use of CPU and memory.
 ```
 docker run -d \
