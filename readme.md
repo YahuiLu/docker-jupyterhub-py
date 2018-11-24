@@ -10,7 +10,7 @@ for data science related work.**
 OS: the latest Ubuntu 18.04  
 Desktop Environment: None  
 Remote Desktop: None  
-Kernels: Python 3.6.5
+Kernels: Python 3.6.6
 - numpy scipy pandas
 - torch torchvision tensorflow keras h2o
 - gensim
