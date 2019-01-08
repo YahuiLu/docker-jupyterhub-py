@@ -1,7 +1,7 @@
 FROM dclong/jupyterhub-jdk
 
 RUN pip3 install \
-        pybuilder mypy pylint flake8 monkeytype yapf pytest \
+        mypy pylint flake8 monkeytype yapf pytest \
         numpy scipy pandas \
         torch torchvision keras h2o \
         gensim \
