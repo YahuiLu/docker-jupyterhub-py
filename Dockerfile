@@ -1,6 +1,6 @@
 FROM dclong/jupyterhub-jdk
 
-RUN pip3 install --ignore-installed entrypoints
+RUN pip3 install --upgrade --ignore-installed entrypoints
 
 RUN pip3 install \
         mypy pylint flake8 monkeytype yapf pytest \
