@@ -17,7 +17,7 @@ and mounts the current working directory and `/home` on the host machine
 to `/workdir` and `/home_host` in the container respectively.
 ```
 docker run -d \
-    --name jupyterhub-ds \
+    --name jupyterhub-py \
     --log-opt max-size=50m \
     -p 8000:8000 \
     -e DOCKER_USER=`id -un` \
@@ -33,7 +33,7 @@ The following command (only works on Linux) does the same as the above one
 except that it limits the use of CPU and memory.
 ```
 docker run -d \
-    --name jupyterhub-ds \
+    --name jupyterhub-py \
     --log-opt max-size=50m \
     --memory=$(($(head -n 1 /proc/meminfo | awk '{print $2}') * 4 / 5))k \
     --cpus=$((`nproc` - 1)) \
