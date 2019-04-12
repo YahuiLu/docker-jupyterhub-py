@@ -3,8 +3,8 @@ FROM dclong/jupyterhub-jdk
 RUN pip3 install --upgrade --ignore-installed entrypoints
 
 RUN pip3 install \
-        mypy pylint flake8 monkeytype yapf pytest \
-        numpy scipy pandas \
+        mypy pylint flake8 monkeytype yapf pytest poetry \
+        numpy scipy pandas pyarrow \
         torch torchvision keras h2o \
         gensim \
         scikit-learn xgboost \
