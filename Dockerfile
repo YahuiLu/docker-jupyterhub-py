@@ -4,7 +4,7 @@ RUN pip3 install --no-cache-dir --upgrade --ignore-installed entrypoints
 
 RUN pip3 install --no-cache-dir \
         mypy pylint flake8 yapf pytest \
-        numpy scipy pandas pyarrow \
+        numpy scipy pandas pyarrow dask \
         scikit-learn xgboost \
         matplotlib bokeh holoviews[recommended] \
         tabulate \
