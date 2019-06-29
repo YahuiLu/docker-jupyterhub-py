@@ -11,5 +11,5 @@ RUN pip3 install --no-cache-dir \
         JayDeBeApi sqlparse \
         requests[socks]
 
-RUN jupyter labextension install @pyviz/jupyterlab_pyviz \
-    && npm cache clean --force
+#RUN jupyter labextension install @pyviz/jupyterlab_pyviz \
+#    && npm cache clean --force
