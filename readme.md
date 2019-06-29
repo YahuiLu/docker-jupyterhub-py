@@ -1,4 +1,4 @@
-# [dclong/jupyterhub-py](https://hub.docker.com/r/dclong/jupyterhub-py/)
+# [dclong/jupyterhub-py @ DockerHub](https://hub.docker.com/r/dclong/jupyterhub-py/) | [dclong/jupyterhub-py @ GitHub](https://github.com/dclong/docker-jupyterhub-py)
 
 JupyterHub and popular Python packages.
 **It is suggested that you use [dclong/jupyterhub-ds](https://hub.docker.com/r/dclong/jupyterhub-ds/)
