@@ -6,7 +6,7 @@ RUN pip3 install --no-cache-dir \
         mypy pylint flake8 yapf pytest \
         numpy scipy pandas pyarrow \
         scikit-learn xgboost \
-        matplotlib bokeh holoviews[recommended] \
+        matplotlib bokeh holoviews[recommended] hvplot \
         tabulate \
         JayDeBeApi sqlparse \
         requests[socks]
