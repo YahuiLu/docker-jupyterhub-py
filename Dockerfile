@@ -3,8 +3,8 @@ FROM dclong/jupyterhub-jdk
 RUN pip3 install --no-cache-dir --upgrade --ignore-installed entrypoints
 
 RUN pip3 install --no-cache-dir \
-        mypy pylint flake8 yapf pytest \
-        numpy scipy pandas pyarrow \
+        mypy pylint flake8 yapf pytest xonsh \
+        numpy scipy pandas pyarrow dask[complete] \
         scikit-learn xgboost \
         matplotlib bokeh holoviews[recommended] hvplot \
         tabulate \
