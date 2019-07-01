@@ -9,7 +9,7 @@ RUN pip3 install --no-cache-dir \
         matplotlib bokeh holoviews[recommended] hvplot \
         tabulate \
         JayDeBeApi sqlparse \
-        requests[socks]
+        requests[socks] lxml
 
 RUN jupyter labextension install @pyviz/jupyterlab_pyviz \
     && npm cache clean --force
