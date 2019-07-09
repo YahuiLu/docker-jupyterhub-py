@@ -8,7 +8,7 @@ RUN pip3 install --no-cache-dir \
         scikit-learn xgboost \
         matplotlib bokeh holoviews[recommended] hvplot \
         tabulate \
-        JayDeBeApi sqlparse \
+        JPype1==0.6.3 JayDeBeApi sqlparse \
         requests[socks] lxml
 
 RUN jupyter labextension install @pyviz/jupyterlab_pyviz \
